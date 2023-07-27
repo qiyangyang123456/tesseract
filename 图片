@@ -1,0 +1,11 @@
+import pytesseract
+from PIL import Image
+
+# 打开图片
+image = Image.open('image.jpg')
+
+# 使用tesseract进行OCR识别
+text = pytesseract.image_to_string(image)
+
+# 打印识别的文本
+print(text)
